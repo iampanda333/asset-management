@@ -1,0 +1,47 @@
+<div class="container" style="margin-top: 10px;">
+  <div class="row">
+    <div class="col-md-12">
+      <form action="#" method="post" novalidate="novalidate">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="row">
+              <div class="col-md-4 col-sm-12 p-0">
+                <input type="text" class="form-control search-slt" placeholder="Enter Search">
+              </div>
+              <div class="col-md-4 col-sm-12 p-0">
+                <select class="form-control search-slt">
+                  <option>Search for</option>
+                  <option value="name">Name</option>
+                  <option value="total">Total</option>
+                </select>
+              </div>
+              <div class="col-md-4 col-sm-12 p-0">
+                <button type="button" class="btn btn-danger wrn-btn">Search</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="row">
+        <div class="col-xs-12">
+          <button class="btn btn-success" (click)="onAddRecipe()">New recipe</button>
+        </div>
+      </div>
+      <hr>
+      <div class="card" *ngFor="let asset of assetsList">
+        <div class="card-body">
+          <p class="card-text">Name: {{ asset.name }}</p>
+          <p class="card-text">Type: {{ asset.type }}</p>
+          <p class="card-text">Count: {{ asset.count }}</p>
+          <a href="#" class="card-link">Edit</a>
+          <a href="#" class="card-link">Delete</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
